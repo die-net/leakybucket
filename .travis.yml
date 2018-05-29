@@ -17,5 +17,4 @@ script:
   - go vet ./...
 
 after_success:
-  - go test -short -cover -covermode=count -coverprofile=$dir/profile.out $dir > all.out
-  - goveralls -coverprofile=all.out -service=travis-ci
+  - goveralls -service=travis-ci
