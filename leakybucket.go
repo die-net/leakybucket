@@ -8,7 +8,7 @@ import (
 
 const (
 	// DrainPerSecond is the number of tokens per second drained from each bucket
-	DrainPerSecond      = 1000000000 
+	DrainPerSecond      = 1000000000
 	gcScanEntries       = 1000
 	gcMustRemoveEntries = 100
 )
