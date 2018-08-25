@@ -128,7 +128,7 @@ func TestOverhead(t *testing.T) {
 	}
 
 	mem = readMem() - mem
-	t.Log("entryOverhead =", int64(mem)/int64(num))
+	t.Log("entryOverhead =", mem/int64(num))
 }
 
 func readMem() int64 {
