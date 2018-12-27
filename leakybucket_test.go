@@ -1,11 +1,12 @@
 package leakybucket
 
 import (
-	"github.com/stretchr/testify/assert"
 	"math/rand"
 	"runtime"
 	"testing"
 	"time"
+
+	"github.com/stretchr/testify/assert"
 )
 
 var entries = []struct {

@@ -75,7 +75,7 @@ func (lb *Cache) PutString(ks string, quantity, limit int64) (int64, bool, bool)
 
 func key(k string) uint64 {
 	h := fnv.New64a()
-	h.Write([]byte(k))
+	_, _ = h.Write([]byte(k))
 	return h.Sum64()
 }
 
