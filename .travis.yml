@@ -1,11 +1,13 @@
+dist: xenial
 language: go
 
 matrix:
   include:
   - go: 1.8.7
   - go: 1.9.7
-  - go: 1.10.7
-  - go: 1.11.4
+  - go: 1.10.8
+  - go: 1.11.11
+  - go: 1.12.6
 
 install:
   - # Do nothing.
@@ -14,7 +16,6 @@ script:
   - go get -t -v ./... github.com/mattn/goveralls
   - go test -v -short -race ./...
   - diff -u <(echo -n) <(gofmt -d -s .)
-  - go vet ./...
 
 after_success:
   - goveralls -service=travis-ci
